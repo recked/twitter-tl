@@ -1,0 +1,108 @@
+//Main Styles
+
+// CSS Reset
+@import "reset.css";
+
+//Variables
+@import "vars";
+
+//Structure
+html,
+body {
+    height: 100%;
+    background: $bg;
+    font-family: $main-font;
+    color: $text;
+}
+
+.wrap {
+    height: 100%;
+    //background: #326999;
+    //max-width: 960px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.heading {
+    font-family: $heading-font;
+    font-size: 30px;
+}
+
+.form {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.lead {
+   
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    @include border-radius(2px);
+    border: 1px solid $main;
+}
+
+.btn {
+    background: #c7c7c7;
+    margin: 10px 0;
+    @include border-radius(3px);
+    border: 1px solid $main;
+}
+
+.btn:hover {
+	background:$sec;
+    color: #e8e8e8;
+}
+
+.btn-load{
+    display: none;
+}
+
+.error, .bio{
+    @extend .lead;
+}
+
+/* Tweets */
+.feed{
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.tiles{
+    width: 30%;
+    min-height: 100px;
+    margin: 5px;
+    display: inline-table;
+    background: #c7c7c7;
+    padding: 10px;
+    border: solid 1px #000;
+    @media screen and (max-width: $break-mid) {
+        width: 45%;
+    }
+    @media screen and (max-width: $break-small) {
+        width: 90%;
+    }
+}
+
+.tweet{
+    margin-bottom: 5px;
+}
+
+.fav, .retweet {
+    font-weight: 600;
+    @extend .tweet;
+}
+
+@import "loader";

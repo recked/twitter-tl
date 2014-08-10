@@ -1,0 +1,220 @@
+@import url(reset.css);
+html,
+body {
+  height: 100%;
+  background: #8e8e8e;
+  font-family: "Open Sans", sans-serif;
+  color: #191919;
+}
+
+.wrap {
+  height: 100%;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.header {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.heading {
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+
+.form {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.lead, .error, .bio {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input[type=text] {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #2a2a2b;
+}
+
+.btn {
+  background: #c7c7c7;
+  margin: 10px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #2a2a2b;
+}
+
+.btn:hover {
+  background: #003854;
+  color: #e8e8e8;
+}
+
+.btn-load {
+  display: none;
+}
+
+/* Tweets */
+.feed {
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tiles {
+  width: 30%;
+  min-height: 100px;
+  margin: 5px;
+  display: inline-table;
+  background: #c7c7c7;
+  padding: 10px;
+  border: solid 1px #000;
+}
+@media screen and (max-width: 1024px) {
+  .tiles {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 814px) {
+  .tiles {
+    width: 90%;
+  }
+}
+
+.tweet, .fav, .retweet {
+  margin-bottom: 5px;
+}
+
+.fav, .retweet {
+  font-weight: 600;
+}
+
+/* 
+CSS Loader. Credit: http://codepen.io/tmyg/pen/bwLom 
+==================================================================
+*/
+#spin {
+  width: 50px;
+  height: 50px;
+  background: #aaa;
+  margin: 0 auto;
+  position: relative;
+  display: none;
+}
+
+#spin:after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  background: #8e8e8e;
+  top: 10%;
+  left: 10%;
+}
+
+#spin span em {
+  background: #003854;
+  -webkit-animation-duration: 3s;
+}
+
+/* No need to edit below this line */
+@-webkit-keyframes rotate-rt {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(360deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate-lt {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+#spin {
+  border-radius: 100%;
+  position: relative;
+}
+
+#spin span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+#spin span:first-child {
+  left: 0;
+}
+
+#spin span:last-child {
+  left: 50%;
+}
+
+#spin span em {
+  border-radius: 999px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+#spin span:first-child em {
+  left: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -webkit-animation-name: rotate-lt;
+  -webkit-transform-origin: 0 50%;
+}
+
+#spin span:last-child em {
+  left: -100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-animation-name: rotate-rt;
+  -webkit-transform-origin: 100% 50%;
+}

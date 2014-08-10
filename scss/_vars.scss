@@ -1,0 +1,24 @@
+//Variables
+
+//Colors
+$main: #2A2A2B;
+$sec: #003854;
+$bg: #8e8e8e;
+$text: #191919;
+
+//Fonts
+$heading-font: 'Roboto Slab', serif;
+$main-font: 'Open Sans', sans-serif;
+
+//Media Queries 
+$break-mid: 1024px;
+$break-small: 814px;
+
+
+//Mixins
+@mixin border-radius($radius) {
+-webkit-border-radius: $radius;
+ -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+      border-radius: $radius;
+}
